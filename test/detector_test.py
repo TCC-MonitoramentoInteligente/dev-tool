@@ -32,7 +32,7 @@ def main():
         object_list = detector.detect(frame=img)
         print()
         for obj in object_list:
-            print(obj.to_string())
+            print(obj)
 
 
 if __name__ == '__main__':
