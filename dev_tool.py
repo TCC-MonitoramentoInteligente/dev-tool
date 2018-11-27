@@ -74,16 +74,16 @@ def main(args):
         for p in person_list:
             color = (0, 0, 0)
 
-            if p.state == algorithm.state_normal:
-                color = (0, 255, 0)  # Green
-            elif p.state == algorithm.state_horizontal_warning:
-                color = (255, 0, 0)  # Blue
-            elif p.state == algorithm.state_vertical_warning:
-                color = (0, 255, 255)  # Yellow
-            elif p.state == algorithm.state_movement_alert:
-                color = (0, 128, 255)  # Orange
-            elif p.state == algorithm.state_fallen:
-                color = (0, 0, 255)  # Red
+            if p.state == algorithm.state_normal:  # Green
+                color = (0, 255, 0)
+            elif p.state == algorithm.state_horizontal_warning:  # Blue
+                color = (255, 0, 0)
+            elif p.state == algorithm.state_vertical_warning:  # Yellow
+                color = (0, 255, 255)
+            elif p.state == algorithm.state_movement_alert:  # Orange
+                color = (0, 128, 255)
+            elif p.state == algorithm.state_fallen:  # Red
+                color = (0, 0, 255)
             frame = draw_box(frame, p.object, color)
 
         cv2.imshow(window, frame)
